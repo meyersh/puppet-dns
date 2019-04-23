@@ -223,7 +223,7 @@ define dns::zone (
     fail("The zone_type must be one of [${valid_zone_type_array}]")
   }
 
-  $zone_file = "${data_dir}/db.${name}"
+  $zone_file = "${data_dir}/db.${zone}"
   $zone_file_stage = "${zone_file}.stage"
 
   validate_array($allow_update)
